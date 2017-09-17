@@ -231,16 +231,12 @@ public class SpUtils {
 
     /**
      * 存储Map集合
-     * @param context 上下文
      * @param key 键
      * @param map 存储的集合
      * @param <K> 指定Map的键
-     * @param <V> 指定Map的值
+     * @param <T> 指定Map的值
      */
-    /**
-     * 设置角色信息以便传递
-     *
-     * */
+
     public <K,T> void setMap(String key , Map<K,T> map){
         if (map == null || map.isEmpty() || map.size() < 1){
             return;
@@ -254,8 +250,8 @@ public class SpUtils {
     }
 
     /**
-     * 获取玩家已经输入完成的角色信息
-     * */
+    * 获取Map集合
+    * */
     public <K,T> Map<K,T> getMap(String key){
         Map<K,T> map = new HashMap<>();
         String strJson = sp.getString(key,null);
